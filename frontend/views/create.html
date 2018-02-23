@@ -1,0 +1,53 @@
+<div growl></div>
+<div class="col-md-12">
+<div class="row">
+	<h2 class="text-center">Tambah Data Mahasiwa</h2>
+	<hr/>
+</div>
+<br />
+<div class="row">
+<form class="form-horizontal" ng-submit="tambah(item)">
+	<div class="form-group">
+		<input type="text" ng-model="item.nim" class="form-control" placeholder="NIM">
+	</div>
+    <div class="form-group">
+		<input type="text" ng-model="item.nama" class="form-control" placeholder="Nama">
+	</div>
+    <div class="form-group">
+		<select class="form-control" ng-model="item.prodi">
+        <option value="">Pilihan Prodi</option>
+        <option ng-repeat="item in api" value={{item.cIdProdi}}>{{item.cNamaProdi}}</option>
+      </select>
+	</div>
+    <div class="form-group">
+    <label>Jenis Kelamin:</label> </br> 
+    <label class="radio-inline"><input type="radio" ng-model="item.jk" value="Laki-laki">Laki - Laki</label>
+    <label class="radio-inline"><input type="radio" ng-model="item.jk" value="Perempuan">Perempuan</label>
+    </div>
+    <div class="form-group">
+		<select class="form-control" ng-model="item.agama">
+        <option value="">Agama</option>
+        <option value="Islam">Islam</option>
+        <option value="Kristen Protestan">Kristen Protestan</option>
+        <option value="Kristen Katolik">Kristen Katolik</option>
+        <option value="Budha">Budha</option>
+        <option value="Hindu">Hindu</option>
+        <option value="Konghucu">Kong Hu Cu</option>
+      	</select>
+	</div>
+    <div class="form-group">
+		<input type="text" ng-model="item.alamat" class="form-control" placeholder="Alamat" />
+	</div>
+    <div class="form-group">
+		<input type="text" ng-model="item.email" class="form-control" placeholder="Email">
+	</div>
+	<div class="form-group">
+		<input type="text" ng-model="item.hp" class="form-control" placeholder="Handphone">
+	</div>
+	<div class="form-group" align="right">
+		<button class="btn btn-success">Tambah Data</button>
+		<a href="#/" class="btn btn-warning">Kembali</a>
+	</div>							
+</form>
+</div>
+</div>
